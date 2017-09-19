@@ -23,7 +23,8 @@ var getTotalSpecificWordCount = function(filePathOne, filePathTwo, word, callbac
   // YOUR CODE HERE
   
   specificWordCount(filePath , word , callback)
-  return count;
+  console.log(count)
+  callback(null,count)
   
 };
 
