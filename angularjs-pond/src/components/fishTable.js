@@ -7,7 +7,7 @@ angular.module('fish-pond')
     <div>
       <fish-table-row 
       	fish = 'fish'
-      	ng-repeat = fish in $ctrl.fishes
+      	ng-repeat = fish in $ctrl.fishes by track index 
       ></fish-table-row>
     </div>`
 });
