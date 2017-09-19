@@ -3,7 +3,7 @@ angular.module('fish-pond')
   this.showDescription = false;
   this.toggleDescription = () => {
     // some code is missing here
-    this.showDescription = true;
+    this.showDescription = !this.showDescription;
     //this.data = fishData;
   };
 })
@@ -17,7 +17,7 @@ angular.module('fish-pond')
       <span class="fish-name">{{$ctrl.fish.number}}</span>
       <span class="fish-name">{{$ctrl.fish.name}}</span>
       <span>
-        <img ng-src="{{$ctrl.fish.image}}" ng-click = $ctrl.toggleDescription()/>
+        <img ng-src="{{$ctrl.fish.image}}" ng-click = "$ctrl.toggleDescription()"/>
       </span>
       <span class="fish-description" ng-if="$ctrl.showDescription">where am i ?</span>
     </div>`

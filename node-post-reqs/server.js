@@ -1,12 +1,16 @@
 //Fill in vars here
 var http= require('http'); 
-var data= [{username:'aya'}]
+// var data= [{username:'aya'}]
 var fs= require('fs');
+var url = require('url');
 
 http.createServer(function (request, response) {
  var path = url.parse(request.url, true).pathname;
-
+ console.log(path);
  if (request.method === 'POST') {
+  if(request.url === "/highfive"){
+    console.log("highfive");
+  }
    /*========YOUR CODE HERE=========*/
    request.on('data' , function (chunk) {
    	/* body... */
@@ -17,7 +21,7 @@ http.createServer(function (request, response) {
    })
  } else if (request.method === 'GET') {
    if(path === '/'){
-     response.writeHead(200,{'Content-Type':'text/html'});
+     response.writeHead(200,{'Content-Type':'image'});
      fs.readFile(__dirname + '/index.html', function(err, data){
        if(err) console.log(err);
        response.end(JSON.stringify(data) );
