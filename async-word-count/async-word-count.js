@@ -22,6 +22,9 @@ var specificWordCount = function(filePath, word, callback) {
 var getTotalSpecificWordCount = function(filePathOne, filePathTwo, word, callback) {
   // YOUR CODE HERE
   
+  specificWordCount(filePath , word , callback)
+  return count;
+  
 };
 
 module.exports = getTotalSpecificWordCount;
